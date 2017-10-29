@@ -23,11 +23,9 @@
   <div class="container">
     <h2 class="subtitle">Latest Updates</h2>
     <div class="columns">
-      <div class="column"> <div class="box">update</div> </div>
-      <div class="column"> <div class="box">update</div> </div>
-      <div class="column"> <div class="box">update</div> </div>
-      <div class="column"> <div class="box">update</div> </div>
-      <div class="column"> <div class="box">update</div> </div>
+      {% for i in tweets %}
+      <div class="column"> <div class="box">{{i.tweet}}</div> </div>
+      {% endfor %}
     </div>
   </div>
 </section>

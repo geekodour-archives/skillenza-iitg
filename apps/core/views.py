@@ -5,5 +5,5 @@ from apps.tweetbot.models import ExtractedUser, ExtractedTweet
 
 class HomeView(View):
     def get(self, request):
-        currentTweets = ExtractedTweet.objects.all()
+        currentTweets = ExtractedTweet.objects.all()[:5]
         return render(request, 'core/index.html', {'tweets':currentTweets})
