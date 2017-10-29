@@ -8,9 +8,14 @@ from model_utils.models import TimeStampedModel
 class ExtractedTweet(TimeStampedModel, models.Model):
      snippet = models.CharField(max_length=80)
      categories = models.ManyToManyField(Category,related_name='tweets')
-     tweetid = models.CharField(max_length=80)
+     tweetid = models.CharField(max_length=80,unique=True)
+
+     def __str__(self):
+         return self.tweetid
 
 #class ExtractedUser(models.Model, TimeStampedModel):
 class ExtractedUser(TimeStampedModel, models.Model):
-     userid = models.CharField(max_length=80)
+     userid = models.CharField(max_length=80,unique=True)
 
+     def __str__(self):
+         return self.userid

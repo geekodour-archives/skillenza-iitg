@@ -13,25 +13,28 @@ api = tweepy.API(auth)
 
 class TweetBot():
 
-    @staticmethod
-    def get_last_10_tweets(user):
+    def get_last_10_tweets(self,user):
         ''' last_10_tweets_for_user '''
-        for tweet in tweepy.Cursor(api.user_timeline(user)).items():
+        tweets  = api.user_timeline(str(user))
+        for tweet in tweets:
+            #tweetitem = ExtractedTweet.objects.filter(tweetid=friend,created__lt=time_threshold)
             print(tweet)
 
-    @staticmethod
-    def random_follow():
-        following = api.friends_ids(item=2)
-        userid = following[randint(0,2)]
+    def random_follow(self):
+        following = api.friends_ids(item=4)
+        userid = following[randint(0,4)]
         friends_friends = api.friends_ids(userid,items=5)
         for friend in friends_friends:
+            print('poop')
             api.create_friendship(str(friend)) # tensorflow model not deployed, so follow all
-            user = ExtractedUser.objects.filter(userid=friend,created__lt=time_threshold)
+            user = ExtractedUser.objects.filter(userid=friend,modified__lt=time_threshold)
             if not user:
                 ExtractedUser.objects.create(userid=friend)
+                print('friend:',friend)
                 self.get_last_10_tweets(friend)
             else:
-                pass
+                self.get_last_10_tweets(friend)
+                # update created at todo
 
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
@@ -41,8 +44,8 @@ class MyStreamListener2(tweepy.StreamListener):
     def on_status(self, status):
         print(status.text)
 
-bot = TweetBot()
-bot.random_follow()
+#bot = TweetBot()
+#bot.random_follow()
 #myStreamListener = MyStreamListener()
 #myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
 #myStream.filter(track=['#Microsoft'])
