@@ -44,7 +44,7 @@ Dependencies :
 ------------------------------------------------------------------------------------------------
 Training the Deep Neural network 
 --------------------------------
-Tensorflow DNN is trained gradient decent, with bio data fed from dataBO.json 
+Tensorflow DNN is trained with gradient decent, with bio data fed from dataBO.json 
 
 Correctnes ~ 80 %
 
