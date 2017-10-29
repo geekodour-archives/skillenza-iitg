@@ -46,7 +46,7 @@ Training the Deep Neural network
 --------------------------------
 Tensorflow DNN is trained with gradient decent, with bio data fed from dataBO.json 
 
-Correctnes ~ 80 %
+Correctness ~ 80 %
 
 ![test_result](https://github.com/geekodour/p4pwc/blob/master/test_res.PNG)
 
