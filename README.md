@@ -56,10 +56,18 @@ Correctness ~ 80 %
 
 ------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------
+FINAL WEBAPP UI
+---------------------------------------------
+
 
 
 ------------------------------------------------------------------------------------------------
-Future Scope :
+Future Scope : Crawl Bot 
+
+   Due to lack of time, we couldn't complete the crawlbot.But the Idea is to crawl websites for government officials and regulators.Basically to search for circulars and reports.
+
+
 
 
 
