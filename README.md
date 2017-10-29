@@ -48,7 +48,7 @@ Tensorflow DNN is trained gradient decent, with bio data fed from dataBO.json
 
 Correctnes ~ 80 %
 
-![alt text](https://github.com/geekodour/p4pwc/blob/master/test_res.PNG)
+![test_result](https://github.com/geekodour/p4pwc/blob/master/test_res.PNG)
 
 ------------------------------------------------------------------------------------------------
 
