@@ -31,7 +31,8 @@ Dependencies :
       
  To run:
  
-      >>>
+      >>> ./manage.py runserver --settings=config.settings.local
+      localhost:8080 - WebUI
 
 
 ------------------------------------------------------------------------------------------------
@@ -49,12 +50,16 @@ The json file is forwarded to the DNN.
 Training the Deep Neural network 
 --------------------------------
 Tensorflow DNN is trained with gradient decent, with bio data fed from dataBO.json scrapped by the twitter bot.
+This is used to decide if the bot will follow a user from government or regulatory body or not.
 
 Correctness ~ 80 %
 
 ![test_result](https://github.com/geekodour/p4pwc/blob/master/test_res.PNG)
 
 ------------------------------------------------------------------------------------------------
+Feature Exraction using NLP 
+--------------------------------
+The twitter runs periodically searching for circulars & reports in the following users timelines.It extracts the information like date , time , bio from the user.
 
 ------------------------------------------------------------------------------------------------
 FINAL WEBAPP UI
