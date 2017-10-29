@@ -29,9 +29,10 @@ INSTALLED_APPS = [
     #'rest_framework',
     #'django_extensions',
     # custom apps
-    'core',
-    'tweetbot',
-    'crawlbot'
+    #'core',
+    'apps.core',
+    'apps.tweetbot',
+    'apps.crawlbot'
 ]
 
 MIDDLEWARE = [

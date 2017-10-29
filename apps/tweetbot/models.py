@@ -1,15 +1,16 @@
 from django.db import models
-from core.models import Category
+from apps.core.models import Category
 
 # 3rd party library imports
 from model_utils.models import TimeStampedModel
 
-class ExtractedTweet(models.Model, TimeStampedModel):
+#class ExtractedTweet(models.Model, TimeStampedModel):
+class ExtractedTweet(TimeStampedModel, models.Model):
      snippet = models.CharField(max_length=80)
      categories = models.ManyToManyField(Category,related_name='tweets')
      tweetid = models.CharField(max_length=80)
 
-class ExtractedUser(models.Model, TimeStampedModel):
-     categories = models.ManyToManyField(Category,related_name='tweets')
+#class ExtractedUser(models.Model, TimeStampedModel):
+class ExtractedUser(TimeStampedModel, models.Model):
      userid = models.CharField(max_length=80)
 
