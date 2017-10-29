@@ -13,6 +13,9 @@ DATABASES = {
     }
 }
 
+# Celery Config
+CELERY_BROKER_URL = 'amqp://localhost'
+
 # Try adding toolbar to the top
 MIDDLEWARE = [
 'debug_toolbar.middleware.DebugToolbarMiddleware',
