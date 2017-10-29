@@ -2,6 +2,7 @@
 
 Project started : 0:50 , 29/10/2017 | PwC challenge #11, Hack2Innovate Hackathon (2 Day), IIT-G
 
+Our approach/solution 
 
 Dependencies :
           
@@ -38,13 +39,16 @@ Dependencies :
 
 
 ------------------------------------------------------------------------------------------------
+ Twitter Bot
+--------------------------------
+The twitter bot (tweetbot) is programmed to follow the tweets of Government officials & Goverment/Political bodies or organisation.It will scrape the bio of all the channels found and will save it in a json file.
 
-
+The json file is forwarded to the DNN.
 
 ------------------------------------------------------------------------------------------------
 Training the Deep Neural network 
 --------------------------------
-Tensorflow DNN is trained with gradient decent, with bio data fed from dataBO.json 
+Tensorflow DNN is trained with gradient decent, with bio data fed from dataBO.json scrapped by the twitter bot.
 
 Correctness ~ 80 %
 
@@ -55,7 +59,7 @@ Correctness ~ 80 %
 
 
 ------------------------------------------------------------------------------------------------
-
+Future Scope :
 
 
 
