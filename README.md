@@ -1,8 +1,7 @@
 # Automatically tracking new circulars and reports shared by regulators
 
 Project started : 0:50 , 29/10/2017 | PwC challenge #11, Hack2Innovate Hackathon (2 Day), IIT-G
-
-Our approach/solution 
+ 
 
 Dependencies :
           
@@ -36,10 +35,6 @@ Dependencies :
 
 
 ------------------------------------------------------------------------------------------------
-
-
-
-------------------------------------------------------------------------------------------------
  Twitter Bot
 --------------------------------
 The twitter bot (tweetbot) is programmed to follow the tweets of Government officials & Goverment/Political bodies or organisation.It will scrape the bio of all the channels found and will save it in a json file.
@@ -62,9 +57,9 @@ Feature Exraction using NLP
 The twitter runs periodically searching for circulars & reports in the following users timelines.It extracts the information like date , time , bio from the user.
 
 ------------------------------------------------------------------------------------------------
-FINAL WEBAPP UI
+MOCK WEBAPP UI
 ---------------------------------------------
-The latest 
+The latest government & regulatory body circulars & reports right at your fingertips.
 
 ![ui](https://github.com/geekodour/p4pwc/blob/master/ui.PNG)
 
