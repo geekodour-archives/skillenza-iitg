@@ -7,6 +7,7 @@ from model_utils.models import TimeStampedModel
 #class ExtractedTweet(models.Model, TimeStampedModel):
 class ExtractedTweet(TimeStampedModel, models.Model):
      snippet = models.CharField(max_length=80)
+     tweet = models.CharField(max_length=200)
      categories = models.ManyToManyField(Category,related_name='tweets')
      tweetid = models.CharField(max_length=80,unique=True)
 

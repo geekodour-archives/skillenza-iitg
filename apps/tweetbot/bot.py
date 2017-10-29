@@ -17,20 +17,22 @@ class TweetBot():
         ''' last_10_tweets_for_user '''
         tweets  = api.user_timeline(str(user))
         for tweet in tweets:
-            #tweetitem = ExtractedTweet.objects.filter(tweetid=friend,created__lt=time_threshold)
-            print(tweet)
+            tweetitem = ExtractedTweet.objects.filter(tweetid=tweet.id_str,created__lt=time_threshold)
+            if not tweetitem:
+                ExtractedTweet.objects.create(tweetid=tweet.id_str,tweet=tweet.text)
+                # do information extraction here
+            else:
+                pass
 
     def random_follow(self):
         following = api.friends_ids(item=4)
         userid = following[randint(0,4)]
         friends_friends = api.friends_ids(userid,items=5)
         for friend in friends_friends:
-            print('poop')
             api.create_friendship(str(friend)) # tensorflow model not deployed, so follow all
             user = ExtractedUser.objects.filter(userid=friend,modified__lt=time_threshold)
             if not user:
                 ExtractedUser.objects.create(userid=friend)
-                print('friend:',friend)
                 self.get_last_10_tweets(friend)
             else:
                 self.get_last_10_tweets(friend)
