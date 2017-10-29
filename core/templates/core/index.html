@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="hero is-info is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Get summary of all the govt. circulars that relates to you.
+      </h1>
+      <div class="field has-addons">
+         <div class="control">
+           <input class="input" type="text" placeholder="Find a circular">
+         </div>
+         <div class="control">
+           <a class="button is-warning">Search</a>
+         </div>
+      </div>
+      <h2 class="subtitle"> Enter a keyword or the category you want to know about. </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Latest Circulars</h1>
+    <h2 class="subtitle">
+      A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+    </h2>
+  </div>
+</section>
+
+{% endblock %}
